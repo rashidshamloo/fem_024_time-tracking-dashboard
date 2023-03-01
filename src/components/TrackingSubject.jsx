@@ -43,31 +43,29 @@ function TrackingSubject({ title, data, timeFrame }) {
       backgroundColor = "bg-gray-600";
   }
   return (
-    <div>
-      <div
-        className={`${backgroundColor} ${backgroundIcon} bg-no-repeat bg-[top_-0.35rem_right_1rem] rounded-xl pt-10 md:pt-11 md:h-[100%]`}
-      >
-        <div className="bg-darkBlue rounded-xl text-gray-100 p-6 grid grid-cols-2 h-[100%] hover:bg-darkBlueHover hover:cursor-pointer">
-          <p className="text-lg">{title}</p>
-          <a
-            href="#"
-            aria-label="Learn More"
-            className="text-right hover:brightness-125"
-          >
-            <img
-              src="images/icon-ellipsis.svg"
-              alt="Ellipsis"
-              aria-hidden="true"
-              className="inline-block"
-            />
-          </a>
-          <p className="text-3xl font-thin mt-2 md:text-5xl md:mt-5">
-            {data.current}hrs
-          </p>
-          <p className="text-right text-paleBlue text-sm mt-5 md:col-start-1 md:col-end-3 md:text-left md:mt-2">
-            Last {timeFrameText} - {data.previous}hrs
-          </p>
-        </div>
+    <div
+      className={`${backgroundColor} ${backgroundIcon} bg-no-repeat bg-[top_-0.35rem_right_1rem] rounded-xl pt-10 md:pt-11 md:h-[100%]`}
+    >
+      <div className="bg-darkBlue rounded-xl text-gray-100 p-6 grid grid-cols-2 h-[100%] relative bottom-[-0.1rem] hover:bg-darkBlueHover hover:cursor-pointer">
+        <p className="text-lg">{title}</p>
+        <a
+          href="#"
+          aria-label="Learn More"
+          className="text-right hover:brightness-125"
+        >
+          <img
+            src="images/icon-ellipsis.svg"
+            alt="Ellipsis"
+            aria-hidden="true"
+            className="inline-block"
+          />
+        </a>
+        <p className="text-3xl font-thin mt-2 md:text-5xl md:mt-5">
+          {data.current}hrs
+        </p>
+        <p className="text-right text-paleBlue text-sm mt-5 md:col-start-1 md:col-end-3 md:text-left md:mt-2">
+          Last {timeFrameText} - {data.previous}hrs
+        </p>
       </div>
     </div>
   );
