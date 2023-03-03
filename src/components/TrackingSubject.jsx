@@ -12,41 +12,35 @@ function TrackingSubject({ title, data, timeFrame }) {
     default:
       timeFrameText = "Week";
   }
-  // set background color and icon based on title
-  let backgroundColor, backgroundIcon;
+  // set background based on title
+  let background;
   switch (title) {
     case "Work":
-      backgroundColor = "bg-lightRedW";
-      backgroundIcon = "bg-[url('/images/icon-work.svg')]";
+      background = "bg-workBg";
       break;
     case "Play":
-      backgroundColor = "bg-softBlue";
-      backgroundIcon = "bg-[url('/images/icon-play.svg')]";
+      background = "bg-playBg";
       break;
     case "Study":
-      backgroundColor = "bg-lightRedS";
-      backgroundIcon = "bg-[url('/images/icon-study.svg')]";
+      background = "bg-studyBg";
       break;
     case "Exercise":
-      backgroundColor = "bg-limeGreen";
-      backgroundIcon = "bg-[url('/images/icon-exercise.svg')]";
+      background = "bg-exerciseBg";
       break;
     case "Social":
-      backgroundColor = "bg-violet";
-      backgroundIcon = "bg-[url('/images/icon-social.svg')]";
+      background = "bg-socialBg";
       break;
     case "Self Care":
-      backgroundColor = "bg-softOrange";
-      backgroundIcon = "bg-[url('/images/icon-self-care.svg')]";
+      background = "bg-selfCareBg";
       break;
     default:
-      backgroundColor = "bg-gray-600";
+      background = "bg-gray-600";
   }
   return (
     <div
-      className={`${backgroundColor} ${backgroundIcon} bg-no-repeat bg-[top_-0.35rem_right_1rem] rounded-xl pt-10 md:pt-11 md:h-[100%]`}
+      className={`${background} bg-subjectBgPs bg-no-repeat rounded-xl pt-10 md:pt-11 md:h-[100%] `}
     >
-      <div className="bg-darkBlue rounded-xl text-gray-100 p-6 grid grid-cols-2 h-[100%] relative bottom-[-0.1rem] hover:bg-darkBlueHover hover:cursor-pointer">
+      <div className="bg-darkBlue rounded-xl text-gray-100 p-6 grid grid-cols-2 h-[100%] hover:bg-darkBlueHover hover:cursor-pointer">
         <p className="text-lg">{title}</p>
         <a
           href="#"
